@@ -1,0 +1,420 @@
+/* Main container styles */
+.all-details-home {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Header styles */
+/* Global page loading animation */
+.all-details-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #111111; /* Dark background */
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  
+  /* Fade-in animation for page loading */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Main header styles */
+  #main-header {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25), 0 0 25px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #16a085, #1abc9c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 1rem;
+    opacity: 0;
+    animation: bounceIn 1s ease-out forwards;
+  }
+  /* Bounce animation for header */
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.5); /* Start smaller */
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1); /* Bounce slightly larger */
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1); /* Return to normal size */
+      opacity: 1;
+    }
+  }
+  /* Header fade-in effect after page load */
+  @keyframes fadeInHeader {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px); /* Slide in from above */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Normal position */
+    }
+  }
+  
+  /* Header hover effect */
+  #main-header:hover {
+    color: #16a085; /* Green text color on hover */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 255, 255, 1); /* Enhanced shadow effect on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Image styles */
+  /* Container for the image and text */
+  .image {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Create space between the image and text */
+    margin-bottom: 4rem; /* Add space below */
+    padding:4rem; /* Add padding for better spacing */
+    flex-wrap: wrap; /* Allow content to wrap for responsive design */
+    background-image: url('../Images/background1.jpg'); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the whole container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
+    /* Prevent image repetition */
+    border-radius: 10px; /* Add rounded corners to the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  }
+  
+  /* Image style */
+  #my-img {
+    border-radius: 10%; /* Full round shape for the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both transform and shadow */
+    border: 4px solid #ffffff; /* White border for contrast */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3)); 
+    margin-right: 25rem;/* Subtle gradient background */
+    
+  }
+  
+  #my-img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 255, 0.6); /* Enhanced shadow with glowing effect */
+  }
+  
+/* Text style */
+#image-details {
+    font-size: 1.7rem; /* Adjusted font size */
+    font-weight: 500; /* Bold text */
+    color: #ffffff; /* White text */
+    max-width: 500px; /* Limit the text width for better readability */
+    line-height: 1.8; /* Spacing between lines */
+    text-align: left; /* Align the text to the left */
+    margin-right: 2rem; /* Space between text and image */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle text shadow for a clean look */
+    transition: transform 0.3s ease-in-out; 
+    margin-left: 20%;/* Smooth transition for text effects */
+  }
+
+  
+  /* Highlighted words style */
+  .highlight {
+    color: #ff6600; /* Greenish color for highlight */
+    font-weight: 900; /* Bold text for highlight */
+    background-color: rgba(22, 160, 133, 0.1); /* Light background for better visibility */
+    padding: 0 4px; /* Add padding around the highlighted text */
+    border-radius: 3px; /* Slight rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for highlight effect */
+  }
+  
+
+  
+  
+  .main-details {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem; /* Enhanced padding for a spacious feel */
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better contrast */
+    border-radius: 12px; /* Slightly larger border radius for smoother rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    font-family: 'Lora', serif; /* Elegant serif font for a sophisticated touch */
+  }
+  
+  #choose-me-details {
+    font-size: 2rem; /* Larger font size for greater impact */
+    font-weight: 800; /* Bold for emphasis */
+    color: #ffbb00; /* White text */
+    margin-bottom: 3.5rem; /* Slightly increased margin for better spacing */
+    text-transform: capitalize; /* Capitalize for added style */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Enhanced text shadow for dramatic effect */
+    letter-spacing: 2px; /* Wider letter-spacing for an elegant, modern feel */
+    line-height: 1.5; /* Adjusted line-height for better readability */
+    font-family: 'Poppins', sans-serif; /* Clean sans-serif font for headings */
+  }
+  
+  #my-main-details {
+    font-size: 1.25rem; /* Slightly larger for better readability */
+    line-height: 1.6;
+    color: #e0e0e0; /* Lighter text color for better contrast and readability */
+    margin-bottom: 3rem; /* Increased margin to create breathing space */
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: justify; /* Justified text for a clean look */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25); /* Subtle shadow for enhanced contrast */
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font for body text */
+
+  }
+  
+  
+  /* Work counts section */
+  .work-counts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap; /* Ensure it adapts well to smaller screens */
+  }
+  
+  /* Individual work count item */
+  #work-counts-webdesign,
+  #work-counts-UiDesigns,
+  #work-counts-Projects {
+    font-size: 1.3rem; /* Slightly increased font size for better readability */
+    font-weight: 600;
+    color: #ffffff; /* White text */
+    background-color: #333333; /* Dark background for work counts */
+    padding: 1rem 2rem; /* Added horizontal padding for balance */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Ensures text is centered */
+  }
+  
+  #work-counts-webdesign b,
+  #work-counts-UiDesigns b,
+  #work-counts-Projects b {
+    color: #16a085; /* Green color for the label */
+    font-size: 1.4rem; /* Slightly larger font for the label */
+  }
+  
+  /* Hover effect for all work count items */
+  #work-counts-webdesign:hover,
+  #work-counts-UiDesigns:hover,
+  #work-counts-Projects:hover {
+    background-color: #16a085; /* Green background on hover */
+    color: #fff; /* White text on hover */
+    transform: translateY(-5px); /* Slight elevation effect on hover */
+  }
+  
+  /* Title for the work counts section */
+  #topic-of-services {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  /* Services list */
+  .services {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+  
+  .services li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff; /* White text */
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .services li:hover {
+    color: #16a085;
+    cursor: pointer;
+  }
+  
+  /* Freelancer section styles */
+  .freelancer-topic {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff; /* White text */
+    margin-bottom: 1rem;
+  }
+  
+  #freelancer-topic-own-details {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ffffff; /* White text */
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+  
+  /* Contact details */
+  #contact {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff; /* White text */
+    background-color: #16a085;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  #contact:hover {
+    transform: scale(1.05);
+    background-color: #1abc9c;
+    color: #fff;
+  }
+  .highlight-main-details{
+    color: #ff6600;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    #main-header {
+      font-size: 1.5rem;
+    }
+  
+    #my-img {
+      width: 140px;
+      height: 160px;
+      margin-left: 40%;
+    }
+  
+    .main-details {
+        padding: 2rem 1rem; 
+        flex-direction: column;
+      
+      }
+    
+      #choose-me-details {
+        font-size: 1.4rem; /* Slightly smaller font size for mobile */
+        margin-bottom: 1.5rem;
+        flex-direction: column;
+      }
+    
+      #my-main-details {
+        font-size: 1.0rem; 
+        flex-direction: column;/* Adjust font size for mobile */
+        text-align: justify;
+      }
+      .work-counts {
+        gap: 1.5rem;
+        flex-direction: column; /* Stack the items on top of each other */
+      }
+    
+      #work-counts-webdesign,
+      #work-counts-UiDesigns,
+      #work-counts-Projects {
+        font-size: 1.1rem;
+        padding: 1rem; /* Reduced padding for smaller screens */
+        width: 100%; /* Full width for better spacing on mobile */
+        margin-bottom: 1.5rem; /* Space between items */
+      }
+    
+      #topic-of-services {
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+      }
+  
+      .services li {
+        font-size: 1.1rem; /* Adjust font size for smaller screens */
+        padding: 0.6rem 1rem; /* Adjust padding for mobile screens */
+        width: 100%; /* Full width for better spacing */
+      }
+    #freelancer-topic-own-details {
+      font-size: 1rem;
+    }
+  
+    #contact {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #main-header {
+        font-size: 1.5rem;
+      }
+    
+      #my-img {
+        width: 140px;
+        height: 160px;
+        margin-left: 40%;
+      }
+    
+      .main-details {
+          padding: 2rem 1rem; 
+          flex-direction: column;
+        
+        }
+      
+        #choose-me-details {
+          font-size: 1.4rem; /* Slightly smaller font size for mobile */
+          margin-bottom: 1.5rem;
+          flex-direction: column;
+        }
+      
+        #my-main-details {
+          font-size: 1.0rem; 
+          flex-direction: column;/* Adjust font size for mobile */
+          text-align: justify;
+        }
+        .work-counts {
+          gap: 1.5rem;
+          flex-direction: column; /* Stack the items on top of each other */
+        }
+      
+        #work-counts-webdesign,
+        #work-counts-UiDesigns,
+        #work-counts-Projects {
+          font-size: 1.1rem;
+          padding: 1rem; /* Reduced padding for smaller screens */
+          width: 100%; /* Full width for better spacing on mobile */
+          margin-bottom: 1.5rem; /* Space between items */
+        }
+      
+        #topic-of-services {
+          font-size: 1.6rem; /* Adjust font size for smaller screens */
+        }
+    
+        .services li {
+          font-size: 1.1rem; /* Adjust font size for smaller screens */
+          padding: 0.6rem 1rem; /* Adjust padding for mobile screens */
+          width: 100%; /* Full width for better spacing */
+        }
+      #freelancer-topic-own-details {
+        font-size: 1rem;
+      }
+    
+      #contact {
+        font-size: 1.2rem;
+      }
+  }
+  

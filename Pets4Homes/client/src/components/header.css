@@ -1,0 +1,172 @@
+/* Main container styles */
+.nav {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Gradient background */
+  padding: 1rem 0; /* Padding for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Flex container styles */
+.navbardetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 72rem; /* Equivalent to max-w-6xl */
+  width: 100%;
+  padding: 0 1rem; /* Side padding for spacing */
+}
+
+/* Website name (left-aligned) */
+.twebpagename {
+  font-family: 'Poppins', sans-serif; /* Modern, professional font */
+  font-weight: 300;
+  font-size: 1.0rem;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 0.1rem;
+  margin-bottom: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.twebpagename:hover {
+  transform: scale(1.1); /* Hover effect for engagement */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Main topic (centered) */
+#h3 {
+  font-family: 'Roboto', sans-serif;
+  color: #f8f9fa; /* Soft white for readability */
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ffba8c); /* Gradient text effect */
+  -webkit-background-clip: text; /* Apply gradient to text */
+  -webkit-text-fill-color: transparent; /* Transparent fill to show gradient */
+  font-weight: 700; /* Bolder for emphasis */
+  font-size: 1.6rem; /* Slightly larger for better visibility */
+  margin: 0 auto; /* Center align */
+  text-align: center;
+  margin-left: 18rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em; /* Add slight spacing for elegance */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#h3:hover {
+  transform: scale(1.05); /* Subtle grow effect */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35); /* More shadow on hover */
+}
+
+/* Navigation list (right-aligned) */
+.other-topics {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-right: -45rem; /* Align closer to the right */
+  justify-content: flex-end; /* Ensure alignment to the right */
+  flex-grow: 1; /* Allow it to occupy available space to push it to the right */
+}
+
+.other-topics a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.other-topics a:hover {
+  color: #ffde59; /* Bright hover color */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive styles for right alignment */
+@media (max-width: 768px) {
+  .other-topics {
+    margin-right: 0; /* Adjust for smaller screens */
+    justify-content: center; /* Center align for smaller screens */
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .other-topics {
+    gap: 0.5rem;
+    justify-content: center; /* Maintain center alignment for smaller screens */
+  }
+
+  .other-topics a {
+    font-size: 0.8rem; /* Adjust size for smaller screens */
+  }
+}
+
+
+/* Profile picture styles */
+.h-7 {
+  height: 2rem; /* Slightly larger for better visibility */
+}
+
+.w-7 {
+  width: 2rem;
+}
+
+.rounded-full {
+  border-radius: 50%;
+  border: 2px solid #fff; /* Add a border for better visibility */
+  transition: transform 0.3s ease;
+}
+
+.rounded-full:hover {
+  transform: scale(1.1);
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbardetails {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .twebpagename {
+    font-size: 1.0rem;
+    margin-left: 0.2rem;
+  }
+
+  #h3 {
+    font-size: 1.0rem;
+    margin: 0;
+    text-align: center;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .twebpagename {
+    font-size: 1.2rem;
+  }
+
+  #h3 {
+    font-size: 0.9rem;
+  }
+
+  .other-topics {
+    gap: 0.5rem;
+    justify-content: center; /* Maintain center alignment for smaller screens */
+  }
+
+  .other-topics a {
+    font-size: 0.8rem; /* Adjust size for smaller screens */
+  }
+}
