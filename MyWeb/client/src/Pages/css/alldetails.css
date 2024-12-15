@@ -1,420 +1,744 @@
 /* Main container styles */
 .all-details-home {
-    font-family: 'Roboto', sans-serif;
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  /* Header styles */
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  /* Black background */
+  color: #ffffff;
+  /* White text */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Header styles */
 /* Global page loading animation */
 .all-details-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #111111; /* Dark background */
-    animation: fadeIn 2s ease-in-out forwards;
-  }
-  
-  /* Fade-in animation for page loading */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Main header styles */
-  #main-header {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25), 0 0 25px rgba(0, 255, 255, 0.5);
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #16a085, #1abc9c);
-    -webkit-background-clip: text;
-    background-clip: text;
-    padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #111111;
+  /* Dark background */
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Fade-in animation for page loading */
+@keyframes fadeIn {
+  0% {
     opacity: 0;
-    animation: bounceIn 1s ease-out forwards;
   }
-  /* Bounce animation for header */
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Main header styles */
+#main-header {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25), 0 0 25px rgba(0, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding: 1rem;
+  opacity: 0;
+  animation: bounceIn 1s ease-out forwards;
+}
+
+/* Bounce animation for header */
 @keyframes bounceIn {
-    0% {
-      transform: scale(0.5); /* Start smaller */
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.1); /* Bounce slightly larger */
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1); /* Return to normal size */
-      opacity: 1;
-    }
+  0% {
+    transform: scale(0.5);
+    /* Start smaller */
+    opacity: 0;
   }
-  /* Header fade-in effect after page load */
-  @keyframes fadeInHeader {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px); /* Slide in from above */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0); /* Normal position */
-    }
+
+  60% {
+    transform: scale(1.1);
+    /* Bounce slightly larger */
+    opacity: 1;
   }
-  
-  /* Header hover effect */
-  #main-header:hover {
-    color: #16a085; /* Green text color on hover */
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 255, 255, 1); /* Enhanced shadow effect on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+
+  100% {
+    transform: scale(1);
+    /* Return to normal size */
+    opacity: 1;
   }
-  
-  /* Image styles */
-  /* Container for the image and text */
-  .image {
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Vertically center the content */
-    justify-content: space-between; /* Create space between the image and text */
-    margin-bottom: 4rem; /* Add space below */
-    padding:4rem; /* Add padding for better spacing */
-    flex-wrap: wrap; /* Allow content to wrap for responsive design */
-    background-image: url('../Images/background1.jpg'); /* Add your background image */
-    background-size: cover; /* Ensure the image covers the whole container */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; 
-    /* Prevent image repetition */
-    border-radius: 10px; /* Add rounded corners to the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+/* Header fade-in effect after page load */
+@keyframes fadeInHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Slide in from above */
   }
-  
-  /* Image style */
-  #my-img {
-    border-radius: 10%; /* Full round shape for the image */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both transform and shadow */
-    border: 4px solid #ffffff; /* White border for contrast */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3)); 
-    margin-right: 25rem;/* Subtle gradient background */
-    
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* Normal position */
   }
-  
-  #my-img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 255, 0.6); /* Enhanced shadow with glowing effect */
-  }
-  
+}
+
+/* Header hover effect */
+#main-header:hover {
+  color: #16a085;
+  /* Green text color on hover */
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 255, 255, 1);
+  /* Enhanced shadow effect on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+}
+
+/* Image styles */
+/* Container for the image and text */
+.image {
+  display: flex;
+  /* Flexbox for alignment */
+  align-items: center;
+  /* Vertically center the content */
+  justify-content: space-between;
+  /* Create space between the image and text */
+  margin-bottom: 4rem;
+  /* Add space below */
+  padding: 4rem;
+  /* Add padding for better spacing */
+  flex-wrap: wrap;
+  /* Allow content to wrap for responsive design */
+  background-image: url('../Images/background1.jpg');
+  /* Add your background image */
+  background-size: cover;
+  /* Ensure the image covers the whole container */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Prevent image repetition */
+  border-radius: 10px;
+  /* Add rounded corners to the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Optional shadow for depth */
+}
+
+/* Image style */
+#my-img {
+  border-radius: 10%;
+  /* Full round shape for the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Enhanced shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition for both transform and shadow */
+  border: 4px solid #ffffff;
+  /* White border for contrast */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+  margin-right: 25rem;
+  /* Subtle gradient background */
+
+}
+
+#my-img:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 255, 0.6);
+  /* Enhanced shadow with glowing effect */
+}
+
 /* Text style */
 #image-details {
-    font-size: 1.7rem; /* Adjusted font size */
-    font-weight: 500; /* Bold text */
-    color: #ffffff; /* White text */
-    max-width: 500px; /* Limit the text width for better readability */
-    line-height: 1.8; /* Spacing between lines */
-    text-align: left; /* Align the text to the left */
-    margin-right: 2rem; /* Space between text and image */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle text shadow for a clean look */
-    transition: transform 0.3s ease-in-out; 
-    margin-left: 20%;/* Smooth transition for text effects */
+  font-size: 1.7rem;
+  /* Adjusted font size */
+  font-weight: 500;
+  /* Bold text */
+  color: #ffffff;
+  /* White text */
+  max-width: 500px;
+  /* Limit the text width for better readability */
+  line-height: 1.8;
+  /* Spacing between lines */
+  text-align: left;
+  /* Align the text to the left */
+  margin-right: 2rem;
+  /* Space between text and image */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  /* Subtle text shadow for a clean look */
+  transition: transform 0.3s ease-in-out;
+  margin-left: 20%;
+  /* Smooth transition for text effects */
+}
+
+
+/* Highlighted words style */
+.highlight {
+  color: #ff6600;
+  /* Greenish color for highlight */
+  font-weight: 900;
+  /* Bold text for highlight */
+  background-color: rgba(22, 160, 133, 0.1);
+  /* Light background for better visibility */
+  padding: 0 4px;
+  /* Add padding around the highlighted text */
+  border-radius: 3px;
+  /* Slight rounded corners */
+  transition: all 0.3s ease;
+  /* Smooth transition for highlight effect */
+}
+
+
+
+
+.main-details {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  /* Enhanced padding for a spacious feel */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Slightly darker background for better contrast */
+  border-radius: 12px;
+  /* Slightly larger border radius for smoother rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  /* Enhanced shadow for depth */
+  font-family: 'Lora', serif;
+  /* Elegant serif font for a sophisticated touch */
+}
+
+#choose-me-details {
+  font-size: 2rem;
+  /* Larger font size for greater impact */
+  font-weight: 800;
+  /* Bold for emphasis */
+  color: #ffbb00;
+  /* White text */
+  margin-bottom: 3.5rem;
+  /* Slightly increased margin for better spacing */
+  text-transform: capitalize;
+  /* Capitalize for added style */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  /* Enhanced text shadow for dramatic effect */
+  letter-spacing: 2px;
+  /* Wider letter-spacing for an elegant, modern feel */
+  line-height: 1.5;
+  /* Adjusted line-height for better readability */
+  font-family: 'Poppins', sans-serif;
+  /* Clean sans-serif font for headings */
+}
+
+#my-main-details {
+  font-size: 1.25rem;
+  /* Slightly larger for better readability */
+  line-height: 1.6;
+  color: #e0e0e0;
+  /* Lighter text color for better contrast and readability */
+  margin-bottom: 3rem;
+  /* Increased margin to create breathing space */
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: justify;
+  /* Justified text for a clean look */
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  /* Subtle shadow for enhanced contrast */
+  font-family: 'Roboto', sans-serif;
+  /* Modern sans-serif font for body text */
+
+}
+
+.work-counts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  /* Adapt layout for smaller screens */
+}
+
+/* Individual work count item */
+#work-counts-webdesign,
+#work-counts-UiDesigns,
+#work-counts-Projects {
+  font-size: 1.7rem;
+  /* Text size */
+  font-weight: 600;
+  color: #ffffff;
+  /* White text */
+  background: linear-gradient(135deg, #ff8c00, #000000);
+  /* Orange gradient */
+  padding: 1.2rem 2.5rem;
+  /* Balanced padding */
+  border-radius: 15px;
+  /* Softer rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  /* Deep shadow for a floating effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  /* Smooth transitions */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Center text */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative border effect */
+#work-counts-webdesign::before,
+#work-counts-UiDesigns::before,
+#work-counts-Projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.3), rgba(255, 69, 0, 0.3));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+#work-counts-webdesign:hover,
+#work-counts-UiDesigns:hover,
+#work-counts-Projects:hover {
+  transform: translateY(-8px) scale(1.05);
+  /* Lift and slightly enlarge */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  /* Enhanced shadow */
+  background: linear-gradient(135deg, #ff4500, #ff8c00);
+  /* Invert the gradient */
+}
+
+#work-counts-webdesign:hover::before,
+#work-counts-UiDesigns:hover::before,
+#work-counts-Projects:hover::before {
+  opacity: 1;
+  /* Show the decorative border effect */
+}
+
+/* Label styling */
+#work-counts-webdesign b,
+#work-counts-UiDesigns b,
+#work-counts-Projects b {
+  color: #ffe600;
+  /* Vibrant yellow accent */
+  font-size: 1.6rem;
+  /* Larger, more prominent label */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /* Subtle text shadow */
+}
+
+/* Title for the work counts section */
+/* Main services section */
+.services {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  /* Adjusted for better layout */
+  margin-left: auto;
+  /* Centered the list */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center-align list items */
+  gap: 1rem;
+  margin-right: 85rem;
+  margin-top: 2rem;
+  /* Space between services */
+}
+
+/* Topic of services title */
+#topic-of-services {
+  font-size: 2.5rem;
+  /* Increased font size for prominence */
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+  /* Enhanced shadow for emphasis */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#topic-of-services:hover {
+  transform: scale(1.05);
+  /* Slight scale effect on hover */
+  color: #ff6600;
+  /* Orange color on hover for attention */
+}
+
+/* Individual service list items */
+.services li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  /* White text */
+  padding: 0.75rem 1.25rem;
+  /* Improved padding for more space */
+  border: 1px solid #ffffff;
+  /* White border for separation */
+  border-radius: 8px;
+  /* Soft rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  /* Limit the width for better layout */
+  margin: 0 auto;
+  /* Center-align list items */
+  text-align: center;
+  /* Center the text */
+}
+
+.services li:hover {
+  background-color: #ffbd06;
+  /* Light green background on hover */
+  color: #ffffff;
+  /* Keep text color white */
+  transform: translateY(-5px);
+  /* Lift effect on hover */
+}
+
+@media (max-width: 768px) {
+
+  /* Responsive design for smaller screens */
+  .services li {
+    font-size: 1rem;
+    /* Smaller font size on mobile */
+    max-width: 90%;
+    /* Allow list items to take more space on small screens */
   }
 
-  
-  /* Highlighted words style */
-  .highlight {
-    color: #ff6600; /* Greenish color for highlight */
-    font-weight: 900; /* Bold text for highlight */
-    background-color: rgba(22, 160, 133, 0.1); /* Light background for better visibility */
-    padding: 0 4px; /* Add padding around the highlighted text */
-    border-radius: 3px; /* Slight rounded corners */
-    transition: all 0.3s ease; /* Smooth transition for highlight effect */
+  #topic-of-services {
+    font-size: 2rem;
+    /* Adjust font size for mobile */
   }
-  
+}
 
-  
-  
+.freelancer-details {
+  margin-right: -45rem;
+  margin-top: -15rem;
+}
+
+.services li:hover {
+  color: #fcfcfc;
+  cursor: pointer;
+}
+
+.freelancer-details {
+  margin-right: -45rem;
+  margin-top: -26rem;
+}
+
+/* Freelancer section styles */
+.freelancer-topic {
+  font-size: 2rem;
+  /* Slightly larger for emphasis */
+  font-weight: 700;
+  color: #ffffff;
+  /* Default white text */
+  margin-bottom: 1.5rem;
+  /* Improved spacing */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
+  text-align: center;
+  /* Center-aligned for a clean layout */
+  position: relative;
+  line-height: 1.4;
+  /* Better line spacing for readability */
+}
+
+.freelancer-topic span {
+  color: #ff6600;
+  /* Orange color for "Sri Lanka" */
+  font-style: italic;
+  /* Makes it stand out */
+  transition: color 0.3s ease, transform 0.3s ease;
+  /* Smooth hover transition */
+}
+
+.freelancer-topic:hover span {
+  color: #ff8800;
+  /* Slightly lighter orange on hover */
+  transform: scale(1.1);
+  /* Adds an interactive feel */
+}
+
+.freelancer-topic:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  /* Slight lift effect */
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  /* Smooth animations */
+}
+
+#freelancer-topic-own-details {
+  font-size: 1.2rem;
+  /* Slightly larger font for better readability */
+  line-height: 1.8;
+  /* Increased line-height for comfortable reading */
+  color: #ffffff;
+  /* White text for clarity */
+  max-width: 800px;
+  /* Limiting width for optimal readability */
+  margin: 0 auto;
+  /* Center-align the text */
+  margin-bottom: 3rem;
+  /* Added space for separation */
+  padding: 1rem;
+  /* Added padding for inner spacing */
+  text-align: center;
+  /* Centered text for balance */
+  border-radius: 10px;
+  /* Soft rounded corners for a modern look */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Semi-transparent background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Light shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transitions for hover effects */
+}
+
+#freelancer-topic-own-details:hover {
+  transform: translateY(-5px);
+  /* Subtle lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
+}
+
+/* Contact details */
+#contact {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff8903;
+  /* Subtle green text */
+  padding: 1rem 1.5rem;
+  border: 2px solid #fdcf00;
+  /* Green border */
+  border-radius: 8px;
+  margin-top: -5%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Space between text and icon */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition for all properties */
+}
+
+#contact:hover {
+  transform: translateY(-5px);
+  /* Lift effect */
+  border-color: #e69603;
+  /* Lighter green border on hover */
+  color: #f6fa07;
+  /* Lighter green text on hover */
+}
+
+#contact::before {
+  content: '\260E';
+  /* Telephone emoji (☎️) */
+  font-size: 1.2rem;
+  color: #ffe600;
+  transition: color 0.3s ease;
+  /* Smooth icon color transition */
+}
+
+#contact:hover::before {
+  color: #ff7b00;
+  /* Change icon color on hover */
+}
+
+.highlight-main-details {
+  color: #ff6600;
+  font-weight: bold;
+  text-decoration: underline;
+  /* Adds a highlight effect */
+}
+
+#contact::before {
+  content: '\f095';
+  /* FontAwesome telephone icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  #main-header {
+    font-size: 1.5rem;
+  }
+
+  .services {
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+
+  .freelancer-details {
+    margin-right: -2rem;
+    margin-top: 2rem;
+  }
+
+  #my-img {
+    width: 140px;
+    height: 160px;
+    margin-left: 40%;
+  }
+
   .main-details {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 3rem 2rem; /* Enhanced padding for a spacious feel */
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better contrast */
-    border-radius: 12px; /* Slightly larger border radius for smoother rounded corners */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
-    font-family: 'Lora', serif; /* Elegant serif font for a sophisticated touch */
-  }
-  
-  #choose-me-details {
-    font-size: 2rem; /* Larger font size for greater impact */
-    font-weight: 800; /* Bold for emphasis */
-    color: #ffbb00; /* White text */
-    margin-bottom: 3.5rem; /* Slightly increased margin for better spacing */
-    text-transform: capitalize; /* Capitalize for added style */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Enhanced text shadow for dramatic effect */
-    letter-spacing: 2px; /* Wider letter-spacing for an elegant, modern feel */
-    line-height: 1.5; /* Adjusted line-height for better readability */
-    font-family: 'Poppins', sans-serif; /* Clean sans-serif font for headings */
-  }
-  
-  #my-main-details {
-    font-size: 1.25rem; /* Slightly larger for better readability */
-    line-height: 1.6;
-    color: #e0e0e0; /* Lighter text color for better contrast and readability */
-    margin-bottom: 3rem; /* Increased margin to create breathing space */
-    max-width: 650px;
-    margin: 0 auto;
-    text-align: justify; /* Justified text for a clean look */
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25); /* Subtle shadow for enhanced contrast */
-    font-family: 'Roboto', sans-serif; /* Modern sans-serif font for body text */
+    padding: 2rem 1rem;
+    flex-direction: column;
 
   }
-  
-  
-  /* Work counts section */
-  .work-counts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap; /* Ensure it adapts well to smaller screens */
+
+  #choose-me-details {
+    font-size: 1.4rem;
+    /* Slightly smaller font size for mobile */
+    margin-bottom: 1.5rem;
+    flex-direction: column;
   }
-  
-  /* Individual work count item */
+
+  #my-main-details {
+    font-size: 1.0rem;
+    flex-direction: column;
+    /* Adjust font size for mobile */
+    text-align: justify;
+  }
+
+  .work-counts {
+    gap: 1.5rem;
+    flex-direction: column;
+    /* Stack the items on top of each other */
+  }
+
   #work-counts-webdesign,
   #work-counts-UiDesigns,
   #work-counts-Projects {
-    font-size: 1.3rem; /* Slightly increased font size for better readability */
-    font-weight: 600;
-    color: #ffffff; /* White text */
-    background-color: #333333; /* Dark background for work counts */
-    padding: 1rem 2rem; /* Added horizontal padding for balance */
-    border-radius: 10px; /* Rounded corners for a softer look */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Ensures text is centered */
+    padding: 1rem 1.5rem;
+    /* Adjust padding */
+    font-size: 1.2rem;
+    /* Slightly smaller text */
   }
-  
+
   #work-counts-webdesign b,
   #work-counts-UiDesigns b,
   #work-counts-Projects b {
-    color: #16a085; /* Green color for the label */
-    font-size: 1.4rem; /* Slightly larger font for the label */
+    font-size: 1.4rem;
+    /* Adjust label size */
   }
-  
-  /* Hover effect for all work count items */
-  #work-counts-webdesign:hover,
-  #work-counts-UiDesigns:hover,
-  #work-counts-Projects:hover {
-    background-color: #16a085; /* Green background on hover */
-    color: #fff; /* White text on hover */
-    transform: translateY(-5px); /* Slight elevation effect on hover */
+
+  #topic-of-services {
+    font-size: 1.6rem;
+    /* Adjust font size for smaller screens */
   }
-  
-  /* Title for the work counts section */
+
+  .services li {
+    font-size: 1rem;
+    /* Smaller font size on mobile */
+    max-width: 90%;
+    /* Allow list items to take more space on small screens */
+  }
+
   #topic-of-services {
     font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    /* Adjust font size for mobile */
   }
-  
-  
-  /* Services list */
-  .services {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 3rem;
-  }
-  
-  .services li {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #ffffff; /* White text */
-    padding: 0.5rem;
-    transition: color 0.3s ease;
-  }
-  
-  .services li:hover {
-    color: #16a085;
-    cursor: pointer;
-  }
-  
-  /* Freelancer section styles */
-  .freelancer-topic {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #ffffff; /* White text */
-    margin-bottom: 1rem;
-  }
-  
+
   #freelancer-topic-own-details {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #ffffff; /* White text */
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 3rem;
-  }
-  
-  /* Contact details */
-  #contact {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff; /* White text */
-    background-color: #16a085;
+    font-size: 1rem;
+    /* Slightly smaller font on smaller screens */
     padding: 1rem;
-    border-radius: 8px;
-    margin-top: 2rem;
-    transition: transform 0.3s ease;
+    /* Ensure text doesn't touch edges */
   }
-  
-  #contact:hover {
-    transform: scale(1.05);
-    background-color: #1abc9c;
-    color: #fff;
+
+  #contact {
+    font-size: 1.2rem;
   }
-  .highlight-main-details{
-    color: #ff6600;
+}
+
+@media (max-width: 480px) {
+  #main-header {
+    font-size: 1.5rem;
   }
-  
-  /* Responsive design adjustments */
-  @media (max-width: 768px) {
-    #main-header {
-      font-size: 1.5rem;
-    }
-  
-    #my-img {
-      width: 140px;
-      height: 160px;
-      margin-left: 40%;
-    }
-  
-    .main-details {
-        padding: 2rem 1rem; 
-        flex-direction: column;
-      
-      }
-    
-      #choose-me-details {
-        font-size: 1.4rem; /* Slightly smaller font size for mobile */
-        margin-bottom: 1.5rem;
-        flex-direction: column;
-      }
-    
-      #my-main-details {
-        font-size: 1.0rem; 
-        flex-direction: column;/* Adjust font size for mobile */
-        text-align: justify;
-      }
-      .work-counts {
-        gap: 1.5rem;
-        flex-direction: column; /* Stack the items on top of each other */
-      }
-    
-      #work-counts-webdesign,
-      #work-counts-UiDesigns,
-      #work-counts-Projects {
-        font-size: 1.1rem;
-        padding: 1rem; /* Reduced padding for smaller screens */
-        width: 100%; /* Full width for better spacing on mobile */
-        margin-bottom: 1.5rem; /* Space between items */
-      }
-    
-      #topic-of-services {
-        font-size: 1.6rem; /* Adjust font size for smaller screens */
-      }
-  
-      .services li {
-        font-size: 1.1rem; /* Adjust font size for smaller screens */
-        padding: 0.6rem 1rem; /* Adjust padding for mobile screens */
-        width: 100%; /* Full width for better spacing */
-      }
-    #freelancer-topic-own-details {
-      font-size: 1rem;
-    }
-  
-    #contact {
-      font-size: 1.2rem;
-    }
+
+  #my-img {
+    width: 140px;
+    height: 160px;
+    margin-left: 40%;
   }
-  
-  @media (max-width: 480px) {
-    #main-header {
-        font-size: 1.5rem;
-      }
-    
-      #my-img {
-        width: 140px;
-        height: 160px;
-        margin-left: 40%;
-      }
-    
-      .main-details {
-          padding: 2rem 1rem; 
-          flex-direction: column;
-        
-        }
-      
-        #choose-me-details {
-          font-size: 1.4rem; /* Slightly smaller font size for mobile */
-          margin-bottom: 1.5rem;
-          flex-direction: column;
-        }
-      
-        #my-main-details {
-          font-size: 1.0rem; 
-          flex-direction: column;/* Adjust font size for mobile */
-          text-align: justify;
-        }
-        .work-counts {
-          gap: 1.5rem;
-          flex-direction: column; /* Stack the items on top of each other */
-        }
-      
-        #work-counts-webdesign,
-        #work-counts-UiDesigns,
-        #work-counts-Projects {
-          font-size: 1.1rem;
-          padding: 1rem; /* Reduced padding for smaller screens */
-          width: 100%; /* Full width for better spacing on mobile */
-          margin-bottom: 1.5rem; /* Space between items */
-        }
-      
-        #topic-of-services {
-          font-size: 1.6rem; /* Adjust font size for smaller screens */
-        }
-    
-        .services li {
-          font-size: 1.1rem; /* Adjust font size for smaller screens */
-          padding: 0.6rem 1rem; /* Adjust padding for mobile screens */
-          width: 100%; /* Full width for better spacing */
-        }
-      #freelancer-topic-own-details {
-        font-size: 1rem;
-      }
-    
-      #contact {
-        font-size: 1.2rem;
-      }
+
+  .main-details {
+    padding: 2rem 1rem;
+    flex-direction: column;
+
   }
-  
+
+  #choose-me-details {
+    font-size: 1.4rem;
+    /* Slightly smaller font size for mobile */
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+  }
+
+  #my-main-details {
+    font-size: 1.0rem;
+    flex-direction: column;
+    /* Adjust font size for mobile */
+    text-align: justify;
+  }
+
+  .work-counts {
+    gap: 1.5rem;
+    /* Reduce spacing for small screens */
+  }
+
+  #work-counts-webdesign,
+  #work-counts-UiDesigns,
+  #work-counts-Projects {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  #work-counts-webdesign b,
+  #work-counts-UiDesigns b,
+  #work-counts-Projects b {
+    font-size: 1.2rem;
+  }
+
+  #topic-of-services {
+    font-size: 1.6rem;
+    /* Adjust font size for smaller screens */
+  }
+
+  .services li {
+    font-size: 1.1rem;
+    /* Adjust font size for smaller screens */
+    padding: 0.6rem 1rem;
+    /* Adjust padding for mobile screens */
+    width: 100%;
+    /* Full width for better spacing */
+  }
+
+  #freelancer-topic-own-details {
+    font-size: 1rem;
+  }
+
+  #contact {
+    font-size: 1.2rem;
+  }
+}
+

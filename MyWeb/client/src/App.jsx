@@ -12,6 +12,7 @@ import ItemProfile from './Pages/ItemProfile';
 import AllDetails from './Pages/AllDetails';
 import UpdateItem from './Pages/UpdateItem';
 import OnePetShow from './Pages/OnePetShow'
+import Footer from './Pages/Footer';
 
 
 
@@ -22,9 +23,10 @@ export default function App() {
   return <BrowserRouter>
 <Header/>
   <Routes>
-    <Route path="/" element={<AllDetails/>}></Route>
+    <Route path="/" element={<div><AllDetails/><Footer/></div>}></Route>
     <Route path="/about" element={<About/>}></Route>
-    <Route path="/sign-in" element={<Signin/>}></Route>
+
+    <Route path="/sign-in" element={<div><Signin/><Footer/></div>}></Route>
     <Route path="/additem" element={<AddItem/>}></Route>
     <Route path="/sign-up" element={<SignUp/>}></Route>
    
