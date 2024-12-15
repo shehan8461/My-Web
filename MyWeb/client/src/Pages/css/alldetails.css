@@ -140,7 +140,7 @@
   border: 4px solid #ffffff;
   /* White border for contrast */
   background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
-  margin-right: 25rem;
+  margin-right: 5rem;
   /* Subtle gradient background */
 
 }
@@ -353,14 +353,14 @@
   align-items: center;
   /* Center-align list items */
   gap: 1rem;
-  margin-right: 85rem;
-  margin-top: 2rem;
+  margin-right: 75%;
+  margin-top:2%;
   /* Space between services */
 }
 
 /* Topic of services title */
 #topic-of-services {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   /* Increased font size for prominence */
   font-weight: 700;
   color: #ffffff;
@@ -427,10 +427,6 @@
   }
 }
 
-.freelancer-details {
-  margin-right: -45rem;
-  margin-top: -15rem;
-}
 
 .services li:hover {
   color: #fcfcfc;
@@ -438,8 +434,9 @@
 }
 
 .freelancer-details {
-  margin-right: -45rem;
-  margin-top: -26rem;
+  margin-left: 45%;
+  margin-top: -27%;
+
 }
 
 /* Freelancer section styles */
@@ -455,7 +452,7 @@
   /* Subtle shadow for depth */
   text-align: center;
   /* Center-aligned for a clean layout */
-  position: relative;
+
   line-height: 1.4;
   /* Better line spacing for readability */
 }
@@ -496,7 +493,7 @@
   /* Limiting width for optimal readability */
   margin: 0 auto;
   /* Center-align the text */
-  margin-bottom: 3rem;
+
   /* Added space for separation */
   padding: 1rem;
   /* Added padding for inner spacing */
@@ -521,7 +518,7 @@
 
 /* Contact details */
 #contact {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #ff8903;
   /* Subtle green text */
@@ -529,7 +526,7 @@
   border: 2px solid #fdcf00;
   /* Green border */
   border-radius: 8px;
-  margin-top: -5%;
+  margin-top: 5%;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -580,17 +577,17 @@
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   #main-header {
-    font-size: 1.5rem;
+    font-size: 1.5%;
   }
 
   .services {
-    margin-right: 1rem;
-    margin-top: 2rem;
+    margin-right: 1%;
+    margin-top: 2%;
   }
 
   .freelancer-details {
-    margin-right: -2rem;
-    margin-top: 2rem;
+    margin-right: 2%;
+    margin-top: 2%;
   }
 
   #my-img {
@@ -600,20 +597,20 @@
   }
 
   .main-details {
-    padding: 2rem 1rem;
+    padding: 2% 1%;
     flex-direction: column;
 
   }
 
   #choose-me-details {
-    font-size: 1.4rem;
+    font-size: 1.4%;
     /* Slightly smaller font size for mobile */
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5%;
     flex-direction: column;
   }
 
   #my-main-details {
-    font-size: 1.0rem;
+    font-size: 1.0%;
     flex-direction: column;
     /* Adjust font size for mobile */
     text-align: justify;
@@ -628,45 +625,45 @@
   #work-counts-webdesign,
   #work-counts-UiDesigns,
   #work-counts-Projects {
-    padding: 1rem 1.5rem;
+    padding: 1% 1.5%;
     /* Adjust padding */
-    font-size: 1.2rem;
+    font-size: 1.2%;
     /* Slightly smaller text */
   }
 
   #work-counts-webdesign b,
   #work-counts-UiDesigns b,
   #work-counts-Projects b {
-    font-size: 1.4rem;
+    font-size: 1.4%;
     /* Adjust label size */
   }
 
   #topic-of-services {
-    font-size: 1.6rem;
+    font-size: 1.6%;
     /* Adjust font size for smaller screens */
   }
 
   .services li {
-    font-size: 1rem;
+    font-size: 1%;
     /* Smaller font size on mobile */
     max-width: 90%;
     /* Allow list items to take more space on small screens */
   }
 
   #topic-of-services {
-    font-size: 2rem;
+    font-size: 2%;
     /* Adjust font size for mobile */
   }
 
   #freelancer-topic-own-details {
-    font-size: 1rem;
+    font-size: 1%;
     /* Slightly smaller font on smaller screens */
-    padding: 1rem;
+    padding: 1%;
     /* Ensure text doesn't touch edges */
   }
 
   #contact {
-    font-size: 1.2rem;
+    font-size: 1.2%;
   }
 }
 
@@ -675,6 +672,11 @@
     font-size: 1.5rem;
   }
 
+  
+  .freelancer-details {
+    margin-right: 2%;
+    margin-top: 2%;
+  }
   #my-img {
     width: 140px;
     height: 160px;

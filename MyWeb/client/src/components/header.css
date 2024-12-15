@@ -48,7 +48,7 @@
   font-size: 1.6rem; /* Slightly larger for better visibility */
   margin: 0 auto; /* Center align */
   text-align: center;
-  margin-left: 18rem;
+  margin-left: 10%;
   line-height: 1.6;
   letter-spacing: 0.05em; /* Add slight spacing for elegance */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
@@ -67,7 +67,7 @@
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  margin-right: -45rem; /* Align closer to the right */
+margin-right: -25%;/* Align closer to the right */
   justify-content: flex-end; /* Ensure alignment to the right */
   flex-grow: 1; /* Allow it to occupy available space to push it to the right */
 }
@@ -78,6 +78,7 @@
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 500;
+  
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
