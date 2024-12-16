@@ -577,7 +577,7 @@
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   #main-header {
-    font-size: 1.5%;
+    font-size: 1.5rem;
   }
 
   .services {
