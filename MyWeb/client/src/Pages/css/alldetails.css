@@ -592,6 +592,12 @@
     flex-direction: column;
 
   }
+  .freelancer-details {
+    margin-left: 45%;
+    margin-top:100%;
+  
+  
+  }
 
   #choose-me-details {
     font-size: 1.4%;
