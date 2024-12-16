@@ -71,7 +71,6 @@
   justify-content: flex-end;
   flex-grow: 1;
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  
 }
 
 /* Links inside navigation */
@@ -173,7 +172,8 @@
   .twebpagename {
     font-size: 0.8rem;
     text-align: center;
-    margin-right: 16rem;
+    margin-right: 19rem;
+    white-space: nowrap; 
 
   }
 
@@ -198,9 +198,9 @@
   }
 
   .twebpagename {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-align: center;
-    margin-right: 16rem;
-
+    margin-right: 19rem;
+    white-space: nowrap; 
   }
 }

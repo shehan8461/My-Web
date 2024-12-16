@@ -38,7 +38,7 @@
 
 /* Main header styles */
 #main-header {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 3rem;
@@ -52,6 +52,7 @@
   padding: 1rem;
   opacity: 0;
   animation: bounceIn 1s ease-out forwards;
+
 }
 
 /* Bounce animation for header */
@@ -669,7 +670,8 @@
 
 @media (max-width: 480px) {
   #main-header {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+ 
   }
 
   
