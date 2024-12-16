@@ -1,6 +1,6 @@
 /* Main container styles */
 .nav {
-  background: linear-gradient(135deg, #211e1c, #df8302); /* Gradient background */
+  background: linear-gradient(135deg, #010101, #ffa11d); /* Gradient background */
   padding: 1rem 0;
   display: flex;
   align-items: center;
@@ -41,7 +41,8 @@
 #h3 {
   font-family: 'Roboto', sans-serif;
   color: #f8f9fa; /* Soft white for readability */
-  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ffba8c); /* Gradient text effect */
+  background: linear-gradient(90deg, #fff7e6, #f7eee2, #fcd601); /* Gradient with orange focus */
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;

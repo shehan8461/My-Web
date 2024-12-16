@@ -14,16 +14,7 @@
 
 /* Header styles */
 /* Global page loading animation */
-.all-details-home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background-color: #111111;
-  /* Dark background */
-  animation: fadeIn 2s ease-in-out forwards;
-}
+
 
 /* Fade-in animation for page loading */
 @keyframes fadeIn {
@@ -40,7 +31,8 @@
 #main-header {
   font-size: 2rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #ff6f00;
+
   margin-bottom: 3rem;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -436,15 +428,17 @@
 
 .freelancer-details {
   margin-left: 45%;
-  margin-top: -27%;
+  position: absolute;
+  margin-top:100%;
+
 
 }
 
 /* Freelancer section styles */
 .freelancer-topic {
-  font-size: 2rem;
+  font-size: 1.8rem;
   /* Slightly larger for emphasis */
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   /* Default white text */
   margin-bottom: 1.5rem;
@@ -586,10 +580,7 @@
     margin-top: 2%;
   }
 
-  .freelancer-details {
-    margin-right: 2%;
-    margin-top: 2%;
-  }
+ 
 
   #my-img {
     width: 140px;
@@ -676,8 +667,22 @@
 
   
   .freelancer-details {
-    margin-right: 2%;
-    margin-top: 2%;
+   position: relative;
+      margin-top:50%;
+      flex-direction: column;
+      text-align: justify;
+    
+  }
+  #freelancer-topic-own-details {
+    font-size: 1rem;
+    flex-direction: column;
+    text-align: justify;
+    
+  }
+  .freelancer-topic{
+     font-size: 1.5rem;
+    flex-direction: column;
+    text-align: justify;
   }
   #my-img {
     width: 140px;
@@ -727,7 +732,9 @@
     font-size: 1.6rem;
     /* Adjust font size for smaller screens */
   }
-
+.services{
+  margin-left: 10%;
+}
   .services li {
     font-size: 1.1rem;
     /* Adjust font size for smaller screens */
@@ -739,6 +746,8 @@
 
   #freelancer-topic-own-details {
     font-size: 1rem;
+    flex-direction: column;
+    text-align: justify;
   }
 
   #contact {
