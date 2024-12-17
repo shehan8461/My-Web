@@ -14,6 +14,7 @@ export default function AllDetails() {
         <p id='image-details'>
           Join over <span className="highlight">best satisfied clients</span> who trust me to transform their websites. With years of experience, I help businesses achieve their digital goals through seamless, impactful designs. Let's work together to elevate your online presence.
         </p>
+        
         <img id='my-img' src={logo} alt='Logo' width="15%" height="15%" />
       </div>
 

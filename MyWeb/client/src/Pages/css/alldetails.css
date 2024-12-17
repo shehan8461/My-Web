@@ -147,7 +147,7 @@
 
 /* Text style */
 #image-details {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   /* Adjusted font size */
   font-weight: 500;
   /* Bold text */
@@ -571,7 +571,9 @@
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   #main-header {
-    font-size: 1.5rem;
+    font-size: auto;
+    margin: auto;
+    padding: auto;
   }
 
   .services {
@@ -579,12 +581,19 @@
     margin-top: 2%;
   }
 
- 
+ #image-details{
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+ }
 
   #my-img {
-    width: 140px;
-    height: 160px;
-    margin-left: 40%;
+    margin-top:auto;
+    width: 50%;
+    margin: 0%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .main-details {
@@ -666,10 +675,24 @@
 
 @media (max-width: 480px) {
   #main-header {
-    font-size: 1.2rem;
- 
+    font-size: auto;
+    margin: auto;
+    padding: auto;
   }
 
+
+  #image-details{
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+   }
+  
+    #my-img {
+      width: 50%;
+      margin: 0%;
+      height: auto;
+      margin-left: auto;
+    }
   
   .freelancer-details {
  
@@ -689,11 +712,7 @@
     flex-direction: column;
     text-align: justify;
   }
-  #my-img {
-    width: 140px;
-    height: 160px;
-    margin-left: 40%;
-  }
+
 
   .main-details {
     padding: 2rem 1rem;
