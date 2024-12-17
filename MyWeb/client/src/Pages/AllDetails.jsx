@@ -54,12 +54,14 @@ export default function AllDetails() {
       <div className='freelancer-details'>
         <h2 className="freelancer-topic">
           Freelance Web Designer Based in <span>Sri Lanka</span>, Serving Clients Worldwide</h2>
-        <p id='freelancer-topic-own-details'>At Shehan's Freelancing Hub, I offer expert web design services to clients worldwide. With over 20 years of experience in web design and UI development, I create tailored solutions for businesses and individuals across industries. From small, responsive websites to complex projects, I focus on aesthetics, functionality, and user experience. Let's collaborate to deliver a website that exceeds your expectations, on time and within budget.
-          
-
+        <p id='freelancer-topic-own-details'>At Shehan's Freelancing Hub, I offer expert web design services to clients worldwide. With over 20 years of experience in web design and UI development, I create tailored solutions for 
+          businesses and individuals across industries. From small, responsive websites to complex projects, I focus on aesthetics, functionality,
+           and user experience. Let's collaborate to deliver a website that exceeds your expectations, on time and within budget.
+           <h3 id='contact'>+94 766 722 019</h3>
         </p>
-        <h3 id='contact'>+94 766 722 019</h3>
+   
       </div>
+
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
  

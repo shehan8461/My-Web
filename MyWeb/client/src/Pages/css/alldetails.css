@@ -189,8 +189,8 @@
 
 
 .main-details {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: auto;
+  margin: auto;
   padding: 3rem 2rem;
   /* Enhanced padding for a spacious feel */
   background-color: rgba(0, 0, 0, 0.7);
@@ -204,7 +204,7 @@
 }
 
 #choose-me-details {
-  font-size: 2rem;
+  font-size: 2.5rem;
   /* Larger font size for greater impact */
   font-weight: 800;
   /* Bold for emphasis */
@@ -225,14 +225,14 @@
 }
 
 #my-main-details {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   /* Slightly larger for better readability */
   line-height: 1.6;
   color: #e0e0e0;
   /* Lighter text color for better contrast and readability */
-  margin-bottom: 3rem;
+  margin-bottom: auto;
   /* Increased margin to create breathing space */
-  max-width: 650px;
+  max-width: 850px;
   margin: 0 auto;
   text-align: justify;
   /* Justified text for a clean look */
@@ -248,9 +248,10 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  margin-bottom: 3rem;
+
   flex-wrap: wrap;
-  margin-top: 2rem;
+
+  margin: auto;
   /* Adapt layout for smaller screens */
 }
 
@@ -335,21 +336,14 @@
 /* Main services section */
 .services {
   list-style-type: none;
-  padding: 0;
-  margin-bottom: 3rem;
-  margin-right: auto;
-  /* Adjusted for better layout */
-  margin-left: auto;
-  /* Centered the list */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Center-align list items */
-  gap: 1rem;
-  margin-right: 75%;
-  margin-top:2%;
+  margin-right: auto; /* Adjust this to margin-left */
+  margin-left: 10%;
+  margin-top: 5%; /* Align to the left */
+  padding: 0; /* Remove auto padding, if necessary */
+  text-align: left; /* Ensure text inside the list aligns to the left */
   /* Space between services */
 }
+
 
 /* Topic of services title */
 #topic-of-services {
@@ -387,7 +381,7 @@
   /* Soft rounded corners */
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   width: 100%;
-  max-width: 400px;
+
   /* Limit the width for better layout */
   margin: 0 auto;
   /* Center-align list items */
@@ -404,51 +398,36 @@
   /* Lift effect on hover */
 }
 
-@media (max-width: 768px) {
-
-  /* Responsive design for smaller screens */
-  .services li {
-    font-size: 1rem;
-    /* Smaller font size on mobile */
-    max-width: 90%;
-    /* Allow list items to take more space on small screens */
-  }
-
-  #topic-of-services {
-    font-size: 2rem;
-    /* Adjust font size for mobile */
-  }
+.freelancer-details {
+  list-style-type: none;
+  margin-left: auto; /* Adjust this to margin-left */
+  margin-right: 5%;
+  margin-top: -10%; /* Align to the left */
+  padding: 0; /* Remove auto padding, if necessary */
+  text-align: left; /* Ensure text inside the list aligns to the left *//* Align text content to the right, if necessary */
 }
-
 
 .services li:hover {
   color: #fcfcfc;
   cursor: pointer;
 }
 
-.freelancer-details {
-  margin-left: 45%;
-  margin-top:100%;
 
-
-}
 
 /* Freelancer section styles */
 .freelancer-topic {
   font-size: 1.8rem;
-  /* Slightly larger for emphasis */
   font-weight: 600;
   color: #ffffff;
-  /* Default white text */
-  margin-bottom: 1.5rem;
-  /* Improved spacing */
+
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow for depth */
+
   text-align: center;
-  /* Center-aligned for a clean layout */
+
 
   line-height: 1.4;
-  /* Better line spacing for readability */
+  margin-bottom: 2%;
+
 }
 
 .freelancer-topic span {
@@ -477,6 +456,7 @@
 }
 
 #freelancer-topic-own-details {
+ 
   font-size: 1.2rem;
   /* Slightly larger font for better readability */
   line-height: 1.8;
@@ -487,6 +467,11 @@
   /* Limiting width for optimal readability */
   margin: 0 auto;
   /* Center-align the text */
+  border: 1px solid #ddd;
+  /* Subtle border for structure */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 
   /* Added space for separation */
   padding: 1rem;
@@ -515,19 +500,17 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: #ff8903;
-  /* Subtle green text */
   padding: 1rem 1.5rem;
   border: 2px solid #fdcf00;
-  /* Green border */
   border-radius: 8px;
-  margin-top: 5%;
+  margin-top: 1%;
+ margin-left: 60%;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  /* Space between text and icon */
   cursor: pointer;
   transition: all 0.3s ease;
-  /* Smooth transition for all properties */
+
 }
 
 #contact:hover {
@@ -571,24 +554,24 @@
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   #main-header {
-    font-size: auto;
     margin: auto;
-    padding: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
   }
 
-  .services {
-    margin-right: 1%;
-    margin-top: 2%;
-  }
 
- #image-details{
-  margin-bottom: 5%;
-  margin-left: auto;
-  margin-right: auto;
- }
+  #image-details {
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   #my-img {
-    margin-top:auto;
+    margin-top: auto;
     width: 50%;
     margin: 0%;
     height: auto;
@@ -596,186 +579,349 @@
     margin-right: auto;
   }
 
-  .main-details {
-    padding: 2% 1%;
-    flex-direction: column;
 
-  }
-  .freelancer-details {
-    margin-left: 45%;
-    margin-top:100%;
-  
-  
-  }
+
 
   #choose-me-details {
-    font-size: 1.4%;
-    /* Slightly smaller font size for mobile */
-    margin-bottom: 1.5%;
-    flex-direction: column;
+    font-size: 1.5rem;
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
   }
 
   #my-main-details {
-    font-size: 1.0%;
-    flex-direction: column;
-    /* Adjust font size for mobile */
-    text-align: justify;
+    font-size: 1rem;
+    margin: 3%;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
   }
 
   .work-counts {
-    gap: 1.5rem;
-    flex-direction: column;
+    gap: auto;
+    flex-direction: auto;
+    padding: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-bottom: 10%;
     /* Stack the items on top of each other */
   }
 
   #work-counts-webdesign,
   #work-counts-UiDesigns,
   #work-counts-Projects {
-    padding: 1% 1.5%;
+    padding: auto;
     /* Adjust padding */
-    font-size: 1.2%;
+    font-size: auto;
     /* Slightly smaller text */
   }
 
   #work-counts-webdesign b,
   #work-counts-UiDesigns b,
   #work-counts-Projects b {
-    font-size: 1.4%;
+    font-size: auto;
     /* Adjust label size */
   }
 
   #topic-of-services {
-    font-size: 1.6%;
+    font-size: auto;
+    margin: auto;
+    padding: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
     /* Adjust font size for smaller screens */
   }
 
+  .services {
+    margin: auto;
+    padding: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+  }
+
   .services li {
-    font-size: 1%;
-    /* Smaller font size on mobile */
-    max-width: 90%;
+    font-size: auto;
+    max-width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
     /* Allow list items to take more space on small screens */
   }
 
   #topic-of-services {
-    font-size: 2%;
+    font-size: auto;
+    max-width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
     /* Adjust font size for mobile */
   }
 
+  .freelancer-details {
+    padding: auto;
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+
+
+  }
+
+  .freelancer-topic {
+    margin-top: 15%;
+    font-size: auto;
+    max-width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
   #freelancer-topic-own-details {
-    font-size: 1%;
-    /* Slightly smaller font on smaller screens */
-    padding: 1%;
+    font-size: auto;
+    max-width: auto;
+    margin-top: 4%;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    justify-content: center;
+    border: 1px solid #ddd;
+    /* Subtle border for structure */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Ensure text doesn't touch edges */
   }
 
   #contact {
-    font-size: 1.2%;
+    margin-top: 3%;
+    height: auto;
+    top: auto;
+    margin-left:auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
   }
 }
 
 @media (max-width: 480px) {
   #main-header {
-    font-size: auto;
     margin: auto;
-    padding: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
   }
 
 
-  #image-details{
+  #image-details {
     margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
-   }
-  
-    #my-img {
-      width: 50%;
-      margin: 0%;
-      height: auto;
-      margin-left: auto;
-    }
-  
-  .freelancer-details {
- 
-      margin-top:50%;
-      flex-direction: column;
-      text-align: justify;
-    
   }
-  #freelancer-topic-own-details {
-    font-size: 1rem;
-    flex-direction: column;
-    text-align: justify;
-    
-  }
-  .freelancer-topic{
-     font-size: 1.5rem;
-    flex-direction: column;
-    text-align: justify;
+
+  #my-img {
+    margin-top: auto;
+    width: 50%;
+    margin: 0%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
-  .main-details {
-    padding: 2rem 1rem;
-    flex-direction: column;
 
-  }
 
   #choose-me-details {
-    font-size: 1.4rem;
-    /* Slightly smaller font size for mobile */
-    margin-bottom: 1.5rem;
-    flex-direction: column;
+    font-size: 1.5rem;
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
   }
 
   #my-main-details {
-    font-size: 1.0rem;
-    flex-direction: column;
-    /* Adjust font size for mobile */
-    text-align: justify;
+    font-size: 1rem;
+    margin: 3%;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
   }
 
   .work-counts {
-    gap: 1.5rem;
-    /* Reduce spacing for small screens */
+    gap: auto;
+    flex-direction: auto;
+    padding: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-bottom: 10%;
+    /* Stack the items on top of each other */
   }
 
   #work-counts-webdesign,
   #work-counts-UiDesigns,
   #work-counts-Projects {
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
+    padding: auto;
+    /* Adjust padding */
+    font-size: auto;
+    /* Slightly smaller text */
   }
 
   #work-counts-webdesign b,
   #work-counts-UiDesigns b,
   #work-counts-Projects b {
-    font-size: 1.2rem;
+    font-size: auto;
+    /* Adjust label size */
   }
 
   #topic-of-services {
-    font-size: 1.6rem;
+    font-size: auto;
+    margin: auto;
+    padding: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
     /* Adjust font size for smaller screens */
   }
-.services{
-  margin-left: 10%;
-}
+
+  .services {
+    margin: auto;
+    padding: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+  }
+
   .services li {
-    font-size: 1.1rem;
-    /* Adjust font size for smaller screens */
-    padding: 0.6rem 1rem;
-    /* Adjust padding for mobile screens */
-    width: 100%;
-    /* Full width for better spacing */
+    font-size: auto;
+    max-width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    /* Allow list items to take more space on small screens */
+  }
+
+  #topic-of-services {
+    font-size: auto;
+    max-width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    /* Adjust font size for mobile */
+  }
+
+  .freelancer-details {
+    padding: auto;
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+
+
+  }
+
+  .freelancer-topic {
+    margin-top: 15%;
+    font-size: auto;
+    max-width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
   }
 
   #freelancer-topic-own-details {
-    font-size: 1rem;
-    flex-direction: column;
+    font-size: auto;
+    max-width: auto;
+    margin-top: 4%;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    justify-content: center;
+    border: 1px solid #ddd;
+    /* Subtle border for structure */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: justify;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ensure text doesn't touch edges */
   }
 
   #contact {
-    font-size: 1.2rem;
+    margin-top: 3%;
+    height: auto;
+    top: auto;
+    margin-left:auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
   }
 }
-
