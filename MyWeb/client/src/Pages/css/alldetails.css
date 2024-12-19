@@ -147,7 +147,7 @@
 
 /* Text style */
 #image-details {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   /* Adjusted font size */
   font-weight: 500;
   /* Bold text */
@@ -164,10 +164,10 @@
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   /* Subtle text shadow for a clean look */
   transition: transform 0.3s ease-in-out;
-  margin-left: 20%;
   /* Smooth transition for text effects */
+  margin-left: 20%;
+  /* Space from the left */
 }
-
 
 /* Highlighted words style */
 .highlight {
@@ -177,7 +177,7 @@
   /* Bold text for highlight */
   background-color: rgba(22, 160, 133, 0.1);
   /* Light background for better visibility */
-  padding: 0 4px;
+
   /* Add padding around the highlighted text */
   border-radius: 3px;
   /* Slight rounded corners */
@@ -336,11 +336,15 @@
 /* Main services section */
 .services {
   list-style-type: none;
-  margin-right: auto; /* Adjust this to margin-left */
+  margin-right: auto;
+  /* Adjust this to margin-left */
   margin-left: 10%;
-  margin-top: 5%; /* Align to the left */
-  padding: 0; /* Remove auto padding, if necessary */
-  text-align: left; /* Ensure text inside the list aligns to the left */
+  margin-top: 5%;
+  /* Align to the left */
+  padding: 0;
+  /* Remove auto padding, if necessary */
+  text-align: left;
+  /* Ensure text inside the list aligns to the left */
   /* Space between services */
 }
 
@@ -400,11 +404,17 @@
 
 .freelancer-details {
   list-style-type: none;
-  margin-left: auto; /* Adjust this to margin-left */
+  margin-left: auto;
+  /* Adjust this to margin-left */
   margin-right: 5%;
-  margin-top: -10%; /* Align to the left */
-  padding: 0; /* Remove auto padding, if necessary */
-  text-align: left; /* Ensure text inside the list aligns to the left *//* Align text content to the right, if necessary */
+  margin-top: -10%;
+  /* Align to the left */
+  padding: 0;
+  /* Remove auto padding, if necessary */
+  text-align: left;
+  margin-bottom: 6%;
+  /* Ensure text inside the list aligns to the left */
+  /* Align text content to the right, if necessary */
 }
 
 .services li:hover {
@@ -456,7 +466,7 @@
 }
 
 #freelancer-topic-own-details {
- 
+
   font-size: 1.2rem;
   /* Slightly larger font for better readability */
   line-height: 1.8;
@@ -504,7 +514,7 @@
   border: 2px solid #fdcf00;
   border-radius: 8px;
   margin-top: 1%;
- margin-left: 60%;
+  margin-left: 60%;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -550,9 +560,95 @@
   font-weight: 900;
 }
 
+.benefit-details {
+  padding: 2%;
+  font-family: 'Arial', sans-serif;
+  background-color: #1d0f01;
+  padding: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: 50%;
+
+}
+
+/* Main heading styling */
+#benefit-details-topic {
+  text-align: center;
+  font-size: 1rem;
+  color: #f7d204;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  padding-bottom: 10px;
+}
+
+/* Section containers */
+.topic-1,
+.topic-2,
+.topic-3,
+.topic-4 {
+  background-color: #1a1919;
+  padding: 15px;
+  color: white;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.topic-1:hover,
+.topic-2:hover,
+.topic-3:hover,
+.topic-4:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Subheading styling */
+.topic-1 h3,
+.topic-2 h3,
+.topic-3 h3,
+.topic-4 h3 {
+  color: #eb7d00;
+  font-size:1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+/* Paragraph styling */
+.topic-1 p,
+.topic-2 p,
+.topic-3 p,
+.topic-4 p {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* Specific colors for sections */
+.topic-1 {
+  border-left: 5px solid #a7a7a7;
+}
+
+.topic-2 {
+  border-left: 5px solid #a7a7a7;
+}
+
+.topic-3 {
+  border-left: 5px solid #a7a7a7;
+}
+
+.topic-4 {
+  border-left: 5px solid #a7a7a7;
+}
 
 /* Responsive design adjustments */
-@media (max-width: 768px) {
+@media (width: 768px) {
   #main-header {
     margin: auto;
     width: auto;
@@ -692,7 +788,7 @@
     top: auto;
     left: auto;
     right: auto;
-
+    margin-bottom: 6%;
 
   }
 
@@ -732,57 +828,109 @@
     margin-top: 3%;
     height: auto;
     top: auto;
-    margin-left:auto;
+    margin-left: auto;
     left: auto;
     right: auto;
     bottom: auto;
+    font-size: auto;
   }
+
+  .benefit-details {
+    font-size: auto;
+    height: auto;
+    width: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    flex-direction: auto;
+    padding: 5%;
+  }
+
+  #benefit-details-topic {
+    font-size: 1.2rem;
+    margin: auto;
+    padding: auto;
+    top: auto;
+
+    left: auto;
+    width: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  .topic-1 h3,
+  .topic-2 h3,
+  .topic-3 h3,
+  .topic-4 h3 {}
+
+  .topic-1 p,
+  .topic-2 p,
+  .topic-3 p,
+  .topic-4 p {}
 }
 
 @media (max-width: 480px) {
   #main-header {
-    margin: auto;
-    width: auto;
+    margin-top: 10%;
+    margin-left: -10%;
+    margin-right: -10%;
+    font-size: 1.2rem;
+  }
+
+  .benefit-details {
+    font-size: auto;
     height: auto;
+    width: auto;
     top: auto;
     left: auto;
     right: auto;
     bottom: auto;
+    padding: 5%;
   }
-
 
   #image-details {
-    margin-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: -10%;
+    font-size: 1.2rem;
+    margin-left: -10%;
+    margin-right: -10%;
+    height: auto;
   }
+
+  /* Less margin on the right */
+
+
+
 
   #my-img {
-    margin-top: auto;
-    width: 50%;
-    margin: 0%;
-    height: auto;
+    margin-top: 15%;
+    width: 60%;
+
+    height: 50%;
     margin-left: auto;
     margin-right: auto;
   }
 
-
+  .main-details {
+    margin: 0%;
+    padding: 0%;
+    height: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 
 
   #choose-me-details {
-    font-size: 1.5rem;
-    margin: auto;
-    width: auto;
-    height: auto;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
+    font-size: 1.2rem;
+    margin-left: -5%;
+    margin-right: -5%;
+    margin-bottom: 5%;
+
   }
 
   #my-main-details {
-    font-size: 1rem;
-    margin: 3%;
+    font-size: 100%;
+   margin-bottom: 10%;
     width: auto;
     height: auto;
     top: auto;
@@ -794,14 +942,6 @@
 
   .work-counts {
     gap: auto;
-    flex-direction: auto;
-    padding: auto;
-    width: auto;
-    height: auto;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
     margin-bottom: 10%;
     /* Stack the items on top of each other */
   }
@@ -809,16 +949,16 @@
   #work-counts-webdesign,
   #work-counts-UiDesigns,
   #work-counts-Projects {
-    padding: auto;
+    padding: 5%;
     /* Adjust padding */
-    font-size: auto;
+    font-size: 100%;
     /* Slightly smaller text */
   }
 
   #work-counts-webdesign b,
   #work-counts-UiDesigns b,
   #work-counts-Projects b {
-    font-size: auto;
+    font-size: 100%;
     /* Adjust label size */
   }
 
@@ -843,16 +983,18 @@
     height: auto;
     top: auto;
     left: auto;
+    
     right: auto;
     bottom: auto;
 
   }
 
   .services li {
-    font-size: auto;
+    font-size: 1rem;
     max-width: auto;
     height: auto;
     top: auto;
+    margin: 2%;
     left: auto;
     right: auto;
     bottom: auto;
@@ -866,36 +1008,32 @@
     height: auto;
     top: auto;
     left: auto;
+    font-size: 1.6rem;
     right: auto;
     bottom: auto;
     /* Adjust font size for mobile */
   }
 
   .freelancer-details {
-    padding: auto;
-    margin: auto;
-    width: auto;
-    height: auto;
-    top: auto;
-    left: auto;
-    right: auto;
+    margin-top: 5%;
+    margin-left: -5%;
+    margin-right: -5%;
+    margin-bottom: 5%;
+   
+
 
 
   }
 
   .freelancer-topic {
     margin-top: 15%;
-    font-size: auto;
-    max-width: auto;
-    height: auto;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
+    margin-left: -5%;
+    margin-right: -5%;
+    font-size: 1.3rem;
   }
 
   #freelancer-topic-own-details {
-    font-size: auto;
+    font-size: 1rem;
     max-width: auto;
     margin-top: 4%;
     height: auto;
@@ -905,23 +1043,32 @@
     bottom: auto;
     justify-content: center;
     border: 1px solid #ddd;
+  
     /* Subtle border for structure */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: justify;
     line-height: 1.6;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Ensure text doesn't touch edges */
   }
 
   #contact {
-    margin-top: 3%;
-    height: auto;
-    top: auto;
-    margin-left:auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
+    margin-top: 5%;
+    
+    margin-left: 5%;
+ 
+  }
+  .benefit-details{
+   margin-top: 10%;
+  }
+  #benefit-details-topic{
+    margin-left: -5%;
+    margin-right: -5%;
+    font-size: 1rem;
+  }
+  .topic-1{
+    font-size: 1rem;
   }
 }

@@ -73,14 +73,14 @@ footer {
 @media (max-width: 768px) {
   
   #gmail{
-    margin: auto;
+    margin: 1%;
     
   }
   #location{
-    margin: auto;
+    margin: 2%;
   }
   #phone {
-    margin: auto;
+    margin: 2%;
 
   }
   /* #phone {
@@ -92,14 +92,14 @@ footer {
 
 @media (max-width: 480px) {
   #gmail{
-    margin: auto;
+    margin: 1%;
     
   }
   #location{
-    margin: auto;
+    margin: 2%;
   }
   #phone {
-    margin: auto;
+    margin: 2%;
 
   }
 }
