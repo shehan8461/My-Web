@@ -956,10 +956,6 @@
     height: auto;
   }
 
-  /* Less margin on the right */
-
-
-
 
   #my-img {
     margin-top: 15%;
@@ -1002,6 +998,7 @@
   .work-counts {
     gap: auto;
     margin-bottom: 10%;
+    font-weight: bold;
     /* Stack the items on top of each other */
   }
 
@@ -1009,6 +1006,7 @@
   #work-counts-UiDesigns,
   #work-counts-Projects {
     padding: 5%;
+    font-weight: bold;
     /* Adjust padding */
     font-size: 100%;
     /* Slightly smaller text */
@@ -1018,6 +1016,7 @@
   #work-counts-UiDesigns b,
   #work-counts-Projects b {
     font-size: 100%;
+
     /* Adjust label size */
   }
 
@@ -1106,15 +1105,16 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: justify;
     line-height: 1.6;
-    letter-spacing: 0.2px;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Ensure text doesn't touch edges */
   }
 
   #contact {
-    margin-top: 5%;
-    
-    margin-left: 5%;
+    margin-top: 2%;
+    padding: auto;
+    margin-left: auto;
+    font-size: large;
  
   }
   .benefit-details{

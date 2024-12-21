@@ -112,35 +112,69 @@
 .object-cover {
   object-fit: cover;
 }
-
-/* Menu button styles */
-.menu-button {
-  display: none; /* Hide on larger screens */
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 15;
-  position: absolute;
-  right: 1rem;
-  top: 1.5rem;
-}
-
-/* Mobile menu styles */
+/* Enhanced Mobile Menu Styles */
 .other-topics.open {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: rgba(0, 0, 0, 0.8); /* Dark background for dropdown */
+  background: linear-gradient(135deg, #ffa11d, #010101); /* Gradient for a modern look */
   position: absolute;
   top: 4rem;
   right: 1rem;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.5rem;
-  z-index: 10;
-  max-height: 15rem; /* Limit height for animation */
+  z-index: 15;
+  max-height: 20rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  animation: fadeIn 0.3s ease-out;
 }
+
+.other-topics.open a {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.other-topics.open a:hover {
+  background-color: rgba(255, 222, 89, 0.8); /* Bright hover background */
+  color: #010101; /* Contrast text color */
+  transform: scale(1.05); /* Subtle zoom */
+}
+
+.menu-button {
+  display: block;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-button:hover {
+  transform: rotate(90deg); 
+  color: #ffde59; 
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -187,22 +221,22 @@
 }
 
 @media (max-width: 480px) {
-  .nav{
-    height: 8rem;
-  }
-  #h3 {
-    font-size: 0.9rem;
+  .other-topics.open {
+    padding: 2rem;
+
   }
 
-  
-  .other-topics a {
-    font-size: 0.8rem; /* Adjust size for smaller screens */
+  .other-topics.open a {
+    font-size: 0.9rem;
+    padding: 0.5rem;
   }
 
   .twebpagename {
-    font-size: 0.7rem;
-    text-align: center;
-    margin-right: 17rem;
-    white-space: nowrap; 
+    font-size: 0.8rem;
+    margin-left:1.6rem;
+  }
+
+  #h3 {
+    font-size: 1rem;
   }
 }
