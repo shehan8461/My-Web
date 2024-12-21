@@ -74,14 +74,18 @@ footer {
   
   #gmail{
     margin: 1%;
-    
+    font-size: 15px;
   }
   #location{
     margin: 2%;
+    font-size: 15px;
   }
   #phone {
     margin: 2%;
-
+    font-size: 15px;
+  }
+  #footer-main-details{
+    font-size: 12px;
   }
   /* #phone {
       flex: auto;
@@ -93,13 +97,17 @@ footer {
 @media (max-width: 480px) {
   #gmail{
     margin: 1%;
-    
+    font-size: 15px;
   }
   #location{
     margin: 2%;
+    font-size: 15px;
   }
   #phone {
     margin: 2%;
-
+    font-size: 15px;
+  }
+  #footer-main-details{
+    font-size: 12px;
   }
 }
