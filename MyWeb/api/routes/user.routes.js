@@ -1,5 +1,5 @@
 import express from 'express'
-import { test, updateUser,deleteUser,updateItem,deleteItem,getItem } from '../controllers/user.controller.js';
+import { test, updateUser,deleteUser,updateItem,deleteRequest,getItem } from '../controllers/user.controller.js';
 import { verifyToken } from '../utils/verifyUser.js';
 
 const router=express.Router();
@@ -11,8 +11,8 @@ router.delete("/delete/:id",verifyToken,deleteUser)
 
 
 
-//items
-router.delete("/deleteitem/:id",verifyToken,deleteItem)
+//Requests
+router.delete("/deleteRequest/:id",verifyToken,deleteRequest)
 router.get('/getitem/:id', getItem);//for update fetch data
 router.put("/updateitem",verifyToken,updateItem)
 

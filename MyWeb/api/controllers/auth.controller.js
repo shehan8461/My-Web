@@ -1,5 +1,5 @@
 import User from "../models/user.model.js";
-import Item from "../models/item.model.js";
+import Requets from "../models/request.model.js";
 import bcryptjs from 'bcryptjs';
 import { errorHandler } from "../utils/error.js";
 import jwt from 'jsonwebtoken'
@@ -40,10 +40,8 @@ export const signin =async(req,res,next)=>{
 
 
 //item register
-export const store=async(req,res,next)=>{
-    const {userId,petname,species,breed,age,gender,color,weight,
-        profilePicture,
-        alternateProfilePicture,price}=req.body;
+export const createRequest=async(req,res,next)=>{
+    const {userId,name,user_email,contact,project_type,budget_range,project_timeline,preferred_communication_mode,project_details,profilePicture}=req.body;
 
     //create auto id for orderid
     function idGen(userId){
@@ -51,13 +49,13 @@ export const store=async(req,res,next)=>{
         const id='ORD'+randomString+userId;
         return id;
     }
-    const petId=idGen(userId)
+    const authId=idGen(userId)
    
 
-    const newItem=new Item({petId,userId, petname,species,breed,age,gender,color,weight,profilePicture,alternateProfilePicture,price});
+    const newItem=new Requets({authId,userId, name,user_email,contact,project_type,budget_range,project_timeline,preferred_communication_mode,project_details,profilePicture});
     try{
         await newItem.save();
-        res.status(202).json({message:"item created successfully"});
+        res.status(202).json({message:"request created successfully"});
     }catch(error){
         next(error);
     }
@@ -65,10 +63,10 @@ export const store=async(req,res,next)=>{
 }
 
 //get items by userid
-export const getOrdersByCustomerId = async (req, res, next) => {
+export const getRequetsByCustomerId = async (req, res, next) => {
     try{
        const customerId=req.params.id;
-        const orders=await Item.find({userId:customerId})
+        const orders=await Requets.find({userId:customerId})
         res.json(orders)
     }catch(error){
         console.log(error)
@@ -81,7 +79,7 @@ export const getOrdersByCustomerId = async (req, res, next) => {
 export const allitems = async (req, res, next) => {
     try{
     
-        const orders=await Item.find({})
+        const orders=await Requets.find({})
         res.json(orders)
     }catch(error){
         console.log(error)
@@ -135,7 +133,7 @@ export const google=async(req,res,next)=>{
 //images
 export const google1 = async (req, res, next) => {
     try {
-        const user = await Item.findOne({ email: req.body.itemId });
+        const user = await Requets.findOne({ email: req.body.itemId });
 
         if (user) {
             const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
@@ -148,7 +146,7 @@ export const google1 = async (req, res, next) => {
             const generatedPassword = Math.random().toString(36).slice(-8) + Math.random().toString(36).slice(-8);
             const hashedPassword = bcryptjs.hashSync(generatedPassword, 10);
 
-            const newUser = new Item({
+            const newUser = new Requets({
                 username: req.body.name.split(' ').join('').toLowerCase() + Math.random().toString(36).slice(-8),
                 email: req.body.itemId,
                 password: hashedPassword,

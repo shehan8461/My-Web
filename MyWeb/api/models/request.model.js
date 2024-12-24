@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const itemSchema = new mongoose.Schema({
-    petId: {
+const requestSchema = new mongoose.Schema({
+    authId: {
         type: String,
         required: true,
         unique: true,
@@ -12,42 +12,42 @@ const itemSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    petname: {
+    name: {
         type: String,
         required: true,
         trim: true
     },
-    species: {
+    user_email: {
         type: String,
         required: true,
         trim: true
     },
-    breed: {
+    contact: {
         type: String,
         required: true,
         trim: true
     },
-    age: {
+    project_type: {
         type: String,
         required: true,
         trim: true
     },
-    gender: {
+    budget_range: {
         type: String,
         required: true,
         trim: true
     },
-    color: {
+    project_timeline: {
         type: String,
         required: true,
         trim: true
     },
-    weight: {
+    preferred_communication_mode: {
         type: String,
         required: true,
         trim: true
     },
-    price: {
+    project_details: {
         type: String,
         required: true,
         trim: true
@@ -56,12 +56,9 @@ const itemSchema = new mongoose.Schema({
         type: String,
         default: 'https://media.istockphoto.com/id/1294866141/vector/picture-reload.jpg?s=612x612&w=is&k=20&c=Ei6q4n6VkP3B0R30d1VdZ4i11CFbyaEoAFy6_WEbArE=',
     },
-    alternateProfilePicture: {
-        type: String,
-        default: 'https://media.istockphoto.com/id/1294866141/vector/picture-reload.jpg?s=612x612&w=is&k=20&c=Ei6q4n6VkP3B0R30d1VdZ4i11CFbyaEoAFy6_WEbArE='
-    }
+   
 }, { timestamps: true });
 
-const Item = mongoose.model("Pets", itemSchema);
+const Requets = mongoose.model("Requets", requestSchema);
 
-export default Item;
+export default Requets;

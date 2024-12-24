@@ -114,49 +114,93 @@ export default function Profile() {
   }
   return (
 
-    <div className='user-profile'>
-      <h1 className='user-profile-name'>Profile</h1>
-      <form  onSubmit={handleSubmit}className='user-profile-form' >
-        <input type='file' ref={fileRef} hidden accept='image/*' onChange={(e)=>setImage(e.target.files[0])}></input>
-
-          {/*allow read;
-                allow write:if
-                request.resource.size < 2 * 1024 * 1024 &&
-                request.resource.contentType.matches('image/.*')*/}
-
-      <img src={formData.profilePicture||currentUser.profilePicture} alt='profile' className=''
-
-      onClick={()=>fileRef.current.click()}></img>
-
-      <p className='user-profile-emage uploading error'>
-            {imageError ?(
-              <span className=''>Error uploading image (file size must be less than 2 MB)</span>
-            ):imagePercent>0&&imagePercent<100?(
-              <span className=''>{`uploading:${imagePercent} %`}</span>
-            ):imagePercent===100?(
-              <span className=''>Image uploaded successfully</span>
-            ):(
-              ''
-            )}
-
-      </p>
-
-      <input defaultValue={currentUser.username} type='text' id='username' placeholder='Username' className='user-profile-username' onChange={handlechange}></input>
-      <input defaultValue={currentUser.email} type='email' id='email' placeholder='Email' className='user-profile-email' onChange={handlechange}></input>
-      <input type='password' id='password' placeholder='password' className='user-profile-password' onChange={handlechange}></input>
-
-      <button className=''>{loading ? 'loading...':'update'}</button>
-
-      </form>
-      <div className='flex justify-between mt-5'>
-        <span onClick={handledeleteAccount} className='user-profile-delete-button'>Close Account</span>
-        <span onClick={handleSignOut}className='user-profile-signout-button'>Sign Out</span>
-        <Link className='navigate-button-additem' to='/additem'><li>List Pet for Sale</li></Link> 
-        <Link className='my-items-button' to='/items'><li>My Inventory</li></Link> 
+    <div className="container user-profile mt-5">
+    <h1 className="text-center mb-4">Profile</h1>
+    <form onSubmit={handleSubmit} className="user-profile-form">
+      <div className="form-group text-center">
+        <input
+          type="file"
+          ref={fileRef}
+          hidden
+          accept="image/*"
+          onChange={(e) => setImage(e.target.files[0])}
+        />
+        <img
+          src={formData.profilePicture || currentUser.profilePicture}
+          alt="profile"
+          className="img-thumbnail profile-picture mb-3"
+          onClick={() => fileRef.current.click()}
+        />
+        <p className="text-danger">
+          {imageError ? (
+            <span>Error uploading image (file size must be less than 2 MB)</span>
+          ) : imagePercent > 0 && imagePercent < 100 ? (
+            <span>{`Uploading: ${imagePercent} %`}</span>
+          ) : imagePercent === 100 ? (
+            <span className="text-success">Image uploaded successfully</span>
+          ) : (
+            ''
+          )}
+        </p>
       </div>
-        <p className='user-profile-errors-button'>{error && 'Something went wrong'}</p>
-        <p className='user-profile-update-success-button'>{updateSuccess  && 'user  updated successfully'}</p>
-     
+      <div className="form-group">
+        <input
+          defaultValue={currentUser.username}
+          type="text"
+          id="username"
+          placeholder="Username"
+          className="form-control mb-3"
+          onChange={handlechange}
+        />
+      </div>
+      <div className="form-group">
+        <input
+          defaultValue={currentUser.email}
+          type="email"
+          id="email"
+          placeholder="Email"
+          className="form-control mb-3"
+          onChange={handlechange}
+        />
+      </div>
+      <div className="form-group">
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          className="form-control mb-3"
+          onChange={handlechange}
+        />
+      </div>
+      <button className="btn btn-primary btn-block" type="submit">
+        {loading ? 'Loading...' : 'Update'}
+      </button>
+    </form>
+    <div className="d-flex justify-content-between mt-4">
+      <span
+        onClick={handledeleteAccount}
+        className="btn btn-danger btn-sm"
+      >
+        Close Account
+      </span>
+      <span
+        onClick={handleSignOut}
+        className="btn btn-secondary btn-sm"
+      >
+        Sign Out
+      </span>
     </div>
+    <div className="d-flex justify-content-between mt-3">
+      <Link className="btn btn-info btn-sm" to="/AddRequest">
+        Add Request
+      </Link>
+      <Link className="btn btn-success btn-sm" to="/OwnRequests">
+        My Requests
+      </Link>
+    </div>
+    <p className="text-danger mt-3">{error && 'Something went wrong'}</p>
+    <p className="text-success">{updateSuccess && 'User updated successfully'}</p>
+  </div>
+  
   )
 }

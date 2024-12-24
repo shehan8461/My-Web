@@ -1,5 +1,5 @@
 import express from 'express'
-import { signin, signup,google,signout,store,getOrdersByCustomerId,allitems,google1 } from '../controllers/auth.controller.js';
+import { signin, signup,google,signout,createRequest,getRequetsByCustomerId,allitems,google1 } from '../controllers/auth.controller.js';
 
 
 const router=express.Router();
@@ -11,7 +11,8 @@ router.post("/google1",google1)
 router.get('/signout',signout)
 
 
-router.post("/store",store)
-router.get("/user/:id",getOrdersByCustomerId)//for data fetch user id
+router.post("/createRequest",createRequest)
+router.get("/user/:id",getRequetsByCustomerId)//for data fetch from user id
 router.get("/users/items",allitems)
+
 export default router
