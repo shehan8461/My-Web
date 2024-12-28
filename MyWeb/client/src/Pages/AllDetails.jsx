@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import './css/alldetails.css';
 import logo from '../Pages/Images/IMG_8567.png';
 import logo1 from '../Pages/Images/people.jpg';
@@ -16,12 +16,93 @@ import sql from '../Pages/Images/sql.png'
 import tailwind from '../Pages/Images/tailwind.png'
 import packettracer from '../Pages/Images/packettracer.png'
 import figma from '../Pages/Images/figma.png'
-
+import { Link, useNavigate } from 'react-router-dom';
+import { app } from '../firebase';
+import { useSelector } from 'react-redux';
+import { getStorage, uploadBytesResumable, ref, getDownloadURL } from 'firebase/storage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Swal from 'sweetalert2';
 
 export default function AllDetails() {
   const [webDesigns, setWebDesigns] = useState(0);
   const [uiDesigns, setUiDesigns] = useState(0);
   const [projects, setProjects] = useState(0);
+
+
+  const [imagePercent, setImagePercent] = useState(0);
+  const fileRef1 = useRef(null);
+  const [imageError, setImageError] = useState(false);
+  const [image1, setImage1] = useState(undefined);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const [validationErrors, setValidationErrors] = useState({});
+
+
+  const [formData, setFormData] = useState({
+    username: "",
+    phone_number: "",
+    email: "",
+    subject: "",
+    message: "",
+
+  });
+  const validateForm = () => {
+    let errors = {};
+    if (!formData.username) errors.username = "Name is required";
+    if (!formData.email) errors.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = "Email is invalid";
+    if (!formData.phone_number) errors.phone_number = "Contact is required";
+    else if (!/^\d{10}$/.test(formData.phone_number)) errors.phone_number = "Contact should be a 10-digit number";
+    if (!formData.subject) errors.subject = "Subject is required";
+    if (!formData.message) errors.message = "Message details are required";
+
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError('');
+  if (!validateForm()) return;
+
+  try {
+    const res = await fetch('/api/message/create_messsage', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!res.ok) {
+      const data = await res.json();
+      throw new Error(data.message || 'Failed to create item');
+    }
+
+    // Show success message with smaller box
+    Swal.fire({
+      icon: 'success',
+      title: 'Message Sent!',
+      text: 'We received your message.',
+      confirmButtonColor: '#00ff7f',
+      width: '300px', // Adjust the width here
+    });
+
+    navigate('/');
+  } catch (error) {
+    setError('Something went wrong!');
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong. Please try again later.',
+      confirmButtonColor: '#d33',
+      width: '300px', // Adjust the width here
+    });
+  }
+};
+
+  
 
   const animateCount = (setter, target, duration) => {
     let start = 0;
@@ -46,7 +127,7 @@ export default function AllDetails() {
 
   return (
     <div className='all-details-home'>
-  
+
       <h1 id='main-header'>Transforming Ideas into Digital Excellence</h1>
       <div className='image'>
         <p id='image-details'>
@@ -110,42 +191,42 @@ export default function AllDetails() {
       </div>
 
       <div className="do-things">
-  <h1 id='what-do-tpic'>What I Can Do</h1>
-  <div className="image-container">
-    <div className="image-item">
-      <img src={react} alt="Image 1" />
-      <span>React</span>
-    </div>
-    <div className="image-item">
-      <img src={figma} alt="Image 2" />
-      <span>Figma</span>
-    </div>
-    <div className="image-item">
-      <img src={angular} alt="Image 3" />
-      <span>Angular</span>
-    </div>
-    <div className="image-item">
-      <img src={nextJs} alt="Image 4" />
-      <span>Next Js</span>
-    </div>
-    <div className="image-item">
-      <img src={sql} alt="Image 5" />
-      <span>Sql</span>
-    </div>
-    <div className="image-item">
-      <img src={packettracer} alt="Image 6" />
-      <span>Packet Tracer</span>
-    </div>
-    <div className="image-item">
-      <img src={laravel} alt="Image 7" />
-      <span>Laravel</span>
-    </div>
-    <div className="image-item">
-      <img src={tailwind} alt="Image 8" />
-      <span>Tailwind</span>
-    </div>
-  </div>
-</div>
+        <h1 id='what-do-tpic'>What I Can Do</h1>
+        <div className="image-container">
+          <div className="image-item">
+            <img src={react} alt="Image 1" />
+            <span>React</span>
+          </div>
+          <div className="image-item">
+            <img src={figma} alt="Image 2" />
+            <span>Figma</span>
+          </div>
+          <div className="image-item">
+            <img src={angular} alt="Image 3" />
+            <span>Angular</span>
+          </div>
+          <div className="image-item">
+            <img src={nextJs} alt="Image 4" />
+            <span>Next Js</span>
+          </div>
+          <div className="image-item">
+            <img src={sql} alt="Image 5" />
+            <span>Sql</span>
+          </div>
+          <div className="image-item">
+            <img src={packettracer} alt="Image 6" />
+            <span>Packet Tracer</span>
+          </div>
+          <div className="image-item">
+            <img src={laravel} alt="Image 7" />
+            <span>Laravel</span>
+          </div>
+          <div className="image-item">
+            <img src={tailwind} alt="Image 8" />
+            <span>Tailwind</span>
+          </div>
+        </div>
+      </div>
 
 
       <div className='services'>
@@ -250,6 +331,144 @@ export default function AllDetails() {
 
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+      <div className="container mt-1">
+  <div
+    className="p-4 shadow-lg"
+    style={{
+      maxWidth: "800px",
+      margin: "0 auto",
+      backgroundColor: "#1e1e1e", // Dark background
+      borderRadius: "15px",
+    }}
+  >
+    <h1
+      className="text-center mb-4"
+      style={{
+        fontSize: "2.5rem",
+        color: "#00ff7f", // Bright green
+        fontWeight: "bold",
+      }}
+    >
+      Send Message
+    </h1>
+    <form onSubmit={handleSubmit}>
+      <div className="mb-3">
+        <label htmlFor="name" className="form-label text-light">
+          Your Name
+        </label>
+        <input
+          id="name"
+          type="text"
+          className={`form-control ${validationErrors.username ? "is-invalid" : ""}`}
+          style={{
+            backgroundColor: "#333333",
+            color: "#ffffff",
+            border: "1px solid #ffffff", // Updated border color
+          }}
+          onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+        />
+        {validationErrors.username && (
+          <div className="invalid-feedback">{validationErrors.username}</div>
+        )}
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="contact" className="form-label text-light">
+          Contact
+        </label>
+        <input
+          id="phone_number"
+          type="text"
+          className={`form-control ${validationErrors.phone_number ? "is-invalid" : ""}`}
+          style={{
+            backgroundColor: "#333333",
+            color: "#ffffff",
+            border: "1px solid #ffffff", // Updated border color
+          }}
+          onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
+        />
+        {validationErrors.phone_number && (
+          <div className="invalid-feedback">{validationErrors.phone_number}</div>
+        )}
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="email" className="form-label text-light">
+          Email
+        </label>
+        <input
+          id="email"
+          type="email"
+          className={`form-control ${validationErrors.email ? "is-invalid" : ""}`}
+          style={{
+            backgroundColor: "#333333",
+            color: "#ffffff",
+            border: "1px solid #ffffff", // Updated border color
+          }}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        />
+        {validationErrors.email && (
+          <div className="invalid-feedback">{validationErrors.email}</div>
+        )}
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="subject" className="form-label text-light">
+          Subject
+        </label>
+        <input
+          id="subject"
+          type="text"
+          className={`form-control ${validationErrors.subject ? "is-invalid" : ""}`}
+          style={{
+            backgroundColor: "#333333",
+            color: "#ffffff",
+            border: "1px solid #ffffff", // Updated border color
+          }}
+          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+        />
+        {validationErrors.subject && (
+          <div className="invalid-feedback">{validationErrors.subject}</div>
+        )}
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="message" className="form-label text-light">
+          Message
+        </label>
+        <textarea
+          id="message"
+          rows="5"
+          className={`form-control ${validationErrors.message ? "is-invalid" : ""}`}
+          style={{
+            backgroundColor: "#333333",
+            color: "#ffffff",
+            border: "1px solid #ffffff", // Updated border color
+            resize: "none",
+          }}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+        ></textarea>
+        {validationErrors.message && (
+          <div className="invalid-feedback">{validationErrors.message}</div>
+        )}
+      </div>
+
+      <button
+        type="submit"
+        className="btn btn-success w-100"
+        style={{
+          fontSize: "1.2rem",
+          fontWeight: "bold",
+        }}
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+
 
     </div>
 

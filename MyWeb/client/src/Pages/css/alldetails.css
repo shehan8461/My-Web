@@ -15,7 +15,7 @@
 .icons-container {
   display: flex;
   justify-content: space-between; /* Space out the icons */
-  gap: 8rem; /* Space between icons */
+  gap: 5rem; /* Space between icons */
   align-items: center; /* Center icons vertically */
   flex-wrap: wrap; /* Allow wrapping for smaller screens */
   margin-bottom: 3%;
@@ -139,7 +139,7 @@ border: 4px solid white;
   }
   .icons-container {
     /* Space out the icons */
-    gap: 2.5rem; /* Space between icons */
+    gap: 2rem; /* Space between icons */
     /* Center icons vertically */
    /* Allow wrapping for smaller screens */
   }
@@ -177,7 +177,7 @@ border: 4px solid white;
   }
   .icons-container {
     /* Space out the icons */
-    gap: 2.2rem; /* Space between icons */
+    gap: 2rem; /* Space between icons */
     /* Center icons vertically */
    /* Allow wrapping for smaller screens */
   }
@@ -475,7 +475,7 @@ border: 4px solid white;
   border: 4px solid #ffffff;
   /* White border for contrast */
   background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
-  margin-right: 18rem;
+
   /* Subtle gradient background */
 
 }
