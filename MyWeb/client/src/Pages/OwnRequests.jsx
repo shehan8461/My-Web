@@ -5,6 +5,8 @@ import { HiOutlineExclamationCircle } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import { getDownloadURL, ref } from 'firebase/storage';
 import { storage } from '../firebase'; // Adjust the path as per your project structure
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 export default function OwnRequests() {
@@ -137,21 +139,18 @@ export default function OwnRequests() {
     </table>
   ) : (
     <p className="text-center text-muted">You have no requests yet!</p>
-  )}
-
-  {showModal && (
-    <div className="modal fade show d-block" tabIndex="-1" role="dialog">
+  )}{showModal && (
+    <div className="modal fade show d-block" tabIndex="1" role="dialog">
       <div className="modal-dialog modal-dialog-centered" role="document">
-        <div className="modal-content">
+        <div className="modal-content" style={{ maxWidth: '90%', maxHeight: '80vh', overflowY: 'auto' }}>
           <div className="modal-header">
             <h5 className="modal-title">Confirm Deletion</h5>
             <button
               type="button"
-              className="close"
+              className="btn-close"
+              aria-label="Close"
               onClick={() => setShowModal(false)}
-            >
-              <span>&times;</span>
-            </button>
+            ></button>
           </div>
           <div className="modal-body text-center">
             <i
@@ -162,7 +161,7 @@ export default function OwnRequests() {
             </i>
             <h5>Are you sure you want to delete this request?</h5>
           </div>
-          <div className="modal-footer">
+          <div className="modal-footer justify-content-center">
             <button
               className="btn btn-danger"
               onClick={handleDeleteOrder}
@@ -170,7 +169,7 @@ export default function OwnRequests() {
               Yes, I am sure
             </button>
             <button
-              className="btn btn-secondary"
+              className="btn btn-secondary ms-2"
               onClick={() => setShowModal(false)}
             >
               No, cancel
@@ -180,6 +179,8 @@ export default function OwnRequests() {
       </div>
     </div>
   )}
+  
+
 </div>
 
   );
