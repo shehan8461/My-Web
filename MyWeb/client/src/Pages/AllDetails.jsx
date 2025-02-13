@@ -22,6 +22,7 @@ import { useSelector } from 'react-redux';
 import { getStorage, uploadBytesResumable, ref, getDownloadURL } from 'firebase/storage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2';
+import dotenv from 'dotenv';
 
 export default function AllDetails() {
   const [webDesigns, setWebDesigns] = useState(0);
@@ -79,7 +80,25 @@ const handleSubmit = async (e) => {
       const data = await res.json();
       throw new Error(data.message || 'Failed to create item');
     }
+    const data = await res.json();
+    
+    if (res.ok && data.success) {
+     
+      
+      const emailResponse = await fetch('/api/message/send_email', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email: formData.email }), // Send only the email
+      });
 
+      const emailData = await emailResponse.json(); // Parse JSON response
+
+      if (emailResponse.ok && emailData.success) {
+          console.log("Thank you email sent to:", formData.email);
+      }
+    }
     // Show success message with smaller box
     Swal.fire({
       icon: 'success',
