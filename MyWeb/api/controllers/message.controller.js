@@ -18,14 +18,14 @@ export const send_email = async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'ruwanyahettiarachchi@gmail.com',
-        pass: 'ltzn jamh brzq tkap'
+        user: 'shehanfreelanzer@gmail.com',
+        pass: 'enxt pqxx egca prul'
       }
     });
 
     // Send a thank you email
     await transporter.sendMail({
-      from: 'ruwanyahettiarachchi@gmail.com',
+      from: 'shehanfreelanzer@gmail.com',
       to: email,
       subject: "Thank You for Choosing Shehan's Freelancing Hub",
       text: `Thank you for choosing Shehan's Freelancing Hub. We have successfully received your message and will get back to you promptly.
